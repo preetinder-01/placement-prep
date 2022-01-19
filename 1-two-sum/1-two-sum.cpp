@@ -2,20 +2,20 @@ class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
         vector<int> sol;
+        map<int,int> m;
+        int n=nums.size();
         for(int i=0;i<nums.size();i++)
         {
             int abc=target-nums[i];
-            for(int j=i+1;j<nums.size();j++)
+            if(m.find(abc)!=m.end())
             {
-                if(abc==nums[j])
-                {
-                    sol.push_back(i);
-                    sol.push_back(j);
-                    return sol;
-                }
-                    
+                auto p=m.find(abc);
+                sol.push_back(p->second);
+                sol.push_back(i);
+                
                 
             }
+            m.insert(make_pair(nums[i],i));
         }
         return sol;
         

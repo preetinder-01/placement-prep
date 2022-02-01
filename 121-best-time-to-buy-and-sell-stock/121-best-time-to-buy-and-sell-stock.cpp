@@ -1,10 +1,11 @@
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
-        if(prices.size()==1)
+        int n=prices.size();
+        if(n==1)
             return 0;
         int profit=0,start=0,end=1;
-        while(end<prices.size())
+        while(end<n)
         {
             if(prices[start]<prices[end])
             {

@@ -9,7 +9,7 @@ public:
     sort(nums.begin(),nums.end());
     for(int i=0;i<nums.size()-2;i++)
     {
-        if(i==0 || ((i>0) && nums[i]!=nums[i-1]))   // either i first elem or (i>0 and ith not equal to ith -1)
+        if(i==0 || ((i>0) && nums[i]!=nums[i-1]))   // either i first elem or (i>0 and ith not equal to ith -1) two adjacent not equal to avoid dupicate triplets
         {
             l=i+1;  // l= next ot i 
             r=nums.size()-1;    // r traverese from right 
@@ -25,7 +25,7 @@ public:
 
                     while(l<r && nums[l]==vec[1])   // traverse until duplicates to skip
                         l++;
-                    while(l<r && nums[r]==vec[2])
+                    while(l<r && nums[r]==vec[2])   //traverse to skip the duplicates of rth elem 
                         r--;
                     vec.clear();
                 }

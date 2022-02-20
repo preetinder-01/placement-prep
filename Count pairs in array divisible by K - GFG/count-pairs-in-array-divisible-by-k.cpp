@@ -15,16 +15,16 @@ class Solution
     {
         //code here
         int sol=0;
-        unordered_map<int,int>m;
+        unordered_map<int,int>m;    // stored in map
         for(int i=0;i<n;i++)
         {
-            int value=(k-(A[i]%k))%k;
+            int value=(k-(A[i]%k))%k;   //we need (a+b)%k==0 so we searched for value required modulo k we did modulo for k as it can be freater than k 
             auto it=m.find(value);
-            if(it!=m.end())
+            if(it!=m.end()) // if found incree sol 
             {
                 sol+=m[value];
             }
-            m[A[i]%k]++;
+            m[A[i]%k]++;    // incr value in map
         }
     return sol;
     }

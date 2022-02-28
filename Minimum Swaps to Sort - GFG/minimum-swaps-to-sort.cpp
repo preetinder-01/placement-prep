@@ -20,6 +20,7 @@ class Solution
     for(int i=0;i<nums.size();i++){
         while(val[i].second != i){
             int tmp = val[i].second;
+            // swap indices in order to avoid repetition 
             swap(val[i], val[tmp]);
             ++count;
         }

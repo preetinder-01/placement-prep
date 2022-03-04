@@ -20,11 +20,11 @@ public:
     vector<vector<int>> permuteUnique(vector<int>& nums) {
         //sort(nums.begin(),nums.end());
         solve(nums,0);
-        vector<vector<int>> ans;
-        for(auto i:s)
-        {
-            ans.push_back(i);
-        }
+        vector<vector<int>> ans(s.begin(),s.end());
+        // for(auto i:s)
+        // {
+        //     ans.push_back(i);
+        // }
         return ans;
     }
 };

@@ -10,4 +10,14 @@ public:
         }
         return dp[n];
     }
-};
+};\
+
+
+/* can be space optimized also 
+by using a,b,c instead of array 
+a=0,b=1,c,i;
+for i=2:n-1
+c=a+b
+a=b
+b=c
+return b;*/

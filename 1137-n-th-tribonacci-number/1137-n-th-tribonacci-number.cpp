@@ -4,7 +4,7 @@ public:
         int f[38];
         f[0]=0;
         f[1]=f[2]=1;
-        for(int i=0;i<35;i++)
+        for(int i=0;i+3<=n;i++)
         {
             f[i+3]=f[i]+f[i+1]+f[i+2];
         }

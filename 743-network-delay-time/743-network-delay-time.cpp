@@ -8,13 +8,13 @@ public:
            int j = times[i][0];
            vec[j].push_back({times[i][1],times[i][2]}); 
         }
-        
+        // signal to maintain the distance        
          vector<int> signal(n+1,INT_MAX);
 
   queue<int> q;
         q.push(k);
         
-   
+    // distance of source is 0
         signal[k] = 0;
         
         while (!q.empty()) {

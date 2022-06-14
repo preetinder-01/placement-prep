@@ -8,7 +8,7 @@ public:
         dp.resize(m+1,vector<int>(n+1,1000));   // resizwed vector in accordance with our string sizes 
         return helper(word1,word2,0,0);
     }
-    int helper(string &s1,string &s2,int i,int j )
+    int helper(string s1,string s2,int i,int j )
     {
         if(i==size(s1) and j==size(s2))return 0;    // if both empty i.e. same then return 0
         if(i==size(s1) or j==size(s2)) return max(size(s1)-i,size(s2)-j);   // if any one empty then elems in another are the number if steps 

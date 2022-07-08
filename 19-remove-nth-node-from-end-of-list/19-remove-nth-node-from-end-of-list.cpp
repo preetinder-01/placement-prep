@@ -21,8 +21,8 @@ public:
         }
         if(fast==NULL)
         {
-            temp=head->next;
-            return temp;
+            head=head->next;
+            return head;
         }
         while(fast->next!=NULL)
         {
@@ -30,7 +30,7 @@ public:
             slow=slow->next;
         }
         slow->next=slow->next->next;
-        return temp;
+        return head;
         
     }
     

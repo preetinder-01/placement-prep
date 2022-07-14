@@ -1,1 +1,2 @@
-​
+Basically to bypass that set usage to discard the duplicate vectors in 2d vector we used conecpt of subsequence that now for choosing elem for certain position instead of doing pick or not for a position with each elem
+Now for a opsition we used for loop to pick elements from array , to skip duplicates we added conditions

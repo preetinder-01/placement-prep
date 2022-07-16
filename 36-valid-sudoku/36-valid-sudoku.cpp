@@ -1,7 +1,8 @@
 class Solution {
-public:
+public: // travered matrix once and checked for whethere element already present or not 
     bool isValidSudoku(vector<vector<char>>& board) {
         set<string> s;
+        // used set to store the already present elemnets in coded form : " ROW+4+7" means row index 4 contains 7 
         for(int i=0;i<81;i++)
         {
             int row=i/9;

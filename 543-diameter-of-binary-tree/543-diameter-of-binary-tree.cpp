@@ -21,7 +21,10 @@ public:
         return 1+max(l,r);
     }
     int diameterOfBinaryTree(TreeNode* root) {
-        
+        // naive approach : at each node calculate lh+rh and retur max of all nodes 
+        // TC: O(N^2)
+         
+        //optimal : modify height function add variable for diamter and calculate using l+r
         int diameter=0;
         height(root,diameter);
         return diameter;

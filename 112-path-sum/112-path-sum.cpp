@@ -21,6 +21,8 @@ public:
         return helper(root->left,currsum,targetSum) or helper(root->right,currsum,targetSum);
     }
     bool hasPathSum(TreeNode* root, int targetSum) {
+        //recursive inorder dfs
+        // used the inorder traversal to compute the sum and base case is when we reached leaf node 
         int currsum=0;
         return helper(root,currsum,targetSum);
     }

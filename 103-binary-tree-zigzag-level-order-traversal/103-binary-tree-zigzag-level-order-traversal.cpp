@@ -16,7 +16,7 @@ public:
         vector<vector<int >> ans;
         if(root==NULL)return ans;
         q.push(root);
-        bool lefttoright=true;     // 0 for left to right     and 1  for right to left 
+        bool lefttoright=true;     // 1 for left to right     and 0  for right to left 
         while(!q.empty())
         {
             int size=q.size();
